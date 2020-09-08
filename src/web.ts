@@ -11,6 +11,7 @@ export class JitsiWeb extends WebPlugin implements JitsiPlugin {
 
   async joinConference(options: {
       roomName: string, url: string,
+      jwt: string;
       channelLastN: string;
       startWithAudioMuted: boolean;
       startWithVideoMuted: boolean;
@@ -19,6 +20,7 @@ export class JitsiWeb extends WebPlugin implements JitsiPlugin {
   }): Promise<{
       roomName: string,
       url: string,
+      jwt: string;
       channelLastN: string;
       startWithAudioMuted: boolean;
       startWithVideoMuted: boolean;

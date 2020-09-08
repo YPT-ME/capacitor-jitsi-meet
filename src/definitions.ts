@@ -7,6 +7,7 @@ export interface JitsiPlugin {
     joinConference(options: {
         roomName: string;
         url: string;
+        jwt: string;
         channelLastN: string;
         startWithAudioMuted: boolean;
         startWithVideoMuted: boolean;
@@ -15,6 +16,7 @@ export interface JitsiPlugin {
     }): Promise<{
         roomName: string;
         url: string;
+        jwt: string;
         channelLastN: string;
         startWithAudioMuted: boolean;
         startWithVideoMuted: boolean;
