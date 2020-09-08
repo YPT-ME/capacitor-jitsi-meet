@@ -78,13 +78,14 @@ public class JitsiActivity extends JitsiMeetActivity {
         Boolean startWithVideoMuted = getIntent().getBooleanExtra("startWithVideoMuted", false);
         Boolean chatEnabled = getIntent().getBooleanExtra("chatEnabled", false);
         Boolean inviteEnabled = getIntent().getBooleanExtra("inviteEnabled", false);
-
+        String jwtToken = getIntent().getStringExtra("jwt");
         Log.d("DEBUG", roomName);
 
         JitsiMeetConferenceOptions options = new JitsiMeetConferenceOptions.Builder()
                 .setServerURL(serverURL)
                 .setRoom(roomName)
                 .setSubject(" ")
+                .setToken(jwtToken)
                 .setAudioMuted(startWithAudioMuted)
                 .setVideoMuted(startWithVideoMuted)
                 .setFeatureFlag("chat.enabled", chatEnabled)
